@@ -28,8 +28,10 @@ buttons = [
 row_val = 1
 col_val = 0
 
+my_name = isinstance
+
 for button in buttons:
-    if isinstance(button, tuple):  # If it's a tuple of buttons
+    if my_name(button, tuple):
         tk.Button(root, text=button[0], padx=70, pady=20, command=lambda: entry.delete(0, tk.END)).grid(row=row_val, column=col_val, columnspan=button[1])
     elif button == '=':
         tk.Button(root, text=button, padx=20, pady=20, command=calculate).grid(row=row_val, column=col_val)
@@ -38,7 +40,7 @@ for button in buttons:
     else:
         tk.Button(root, text=button, padx=20, pady=20, command=lambda b=button: click_button(b)).grid(row=row_val, column=col_val)
 
-    col_val += button[1] if isinstance(button, tuple) else 1
+    col_val += button[1] if my_name(button, tuple) else 1
     if col_val > 3:
         col_val = 0
         row_val += 1
