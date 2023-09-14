@@ -19,7 +19,7 @@ entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 buttons = [
     '7', '8', '9', '/',
     '4', '5', '6', '*',
-    ('phan dinh phap', 4),  # Change to a tuple with the button text and columnspan
+    ('phan dinh phap', 4),  
     '1', '2', '3', '-',
     'C', '0', '=', '+',
     '.'
